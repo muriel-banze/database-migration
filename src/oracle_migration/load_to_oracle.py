@@ -2,9 +2,9 @@ import json
 
 import cx_Oracle
 
-from config import (ORACLE_USER,
-                    ORACLE_PASSWORD,
-                    ORACLE_DSN)
+from config.config import (ORACLE_USER,
+                           ORACLE_PASSWORD,
+                           ORACLE_DSN)
 
 
 def insert_into_oracle(record):

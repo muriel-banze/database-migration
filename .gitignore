@@ -1,2 +1,6 @@
-config.py
-.idea/*
+__pycache__
+*.pyc
+venv/
+/config/config.py
+.idea/
+.idea

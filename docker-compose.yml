@@ -25,3 +25,21 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT_INTERNAL
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+#  connect:
+#    image: debezium/connect:latest
+#    container_name: kafka-connect
+#    ports:
+#      - "8083:8083"
+#    depends_on:
+#      - kafka
+#    environment:
+#      BOOTSTRAP_SERVERS: kafka:9092
+#      GROUP_ID: "1"
+#      CONFIG_STORAGE_TOPIC: debezium_connect_configs
+#      OFFSET_STORAGE_TOPIC: debezium_connect_offsets
+#      STATUS_STORAGE_TOPIC: debezium_connect_status
+#      CONNECT_REST_ADVERTISED_HOST_NAME: kafka-connect
+#      CONNECT_PLUGIN_PATH: /kafka/connect
+#    volumes:
+#      - ./kafka-data:/kafka/connect

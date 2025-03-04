@@ -2,7 +2,7 @@ import json
 
 import psycopg2
 
-from config import POSTGRES_DB, POSTGRES_PASSWORD, POSTGRES_HOST, POSTGRES_USER
+from config.config import POSTGRES_USER, POSTGRES_DB, POSTGRES_PASSWORD, POSTGRES_HOST
 
 
 def insert_into_postgres(record):
